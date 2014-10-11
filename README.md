@@ -2,7 +2,7 @@
 
 
 This a forked repository from rdpeng. 
-The data was taken as from the Machine Learning repository as explaned below.
+The data was taken as from the Machine Learning repository as explaned below. It assumes the data was unzipped. All the files (plot1.R,plot2.R,plot3.R and plot4.R) assume that the data is present in the working directory. 
 For the first R code (plot1.R), the data is loaded into R and then a subset is taken for the 2 days. Finally, a new data frame, (xdata.txt) is created, in order to be able to load the the data quickly into R. This new subset is only 291.6 Kb from the original data set (household_power_consumption.txt) of 126.8 Mb. 
 
 Plot2.R, plot3.R and plot4.R read the new data frame (xdata.txt) for quicker processing. 

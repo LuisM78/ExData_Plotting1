@@ -1,5 +1,13 @@
 ## Introduction
 
+
+This a forked repository from rdpeng. 
+The data was taken as from the Machine Learning repository as explaned below.
+For the first R code (plot1.R), the data is loaded into R and then a subset is taken for the 2 days. Finally, a new data frame, (xdata.txt) is created, in order to be able to load the the data quickly into R. This new subset is only 291.6 Kb from the original data set (household_power_consumption.txt) of 126.8 Mb. 
+
+Plot2.R, plot3.R and plot4.R read the new data frame (xdata.txt) for quicker processing. 
+
+
 This assignment uses data from
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
 Learning Repository</a>, a popular repository for machine learning

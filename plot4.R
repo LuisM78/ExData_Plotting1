@@ -1,6 +1,11 @@
+# Reads the subset data from plot1.R for quicker processing
+
 xdata  <- read.table("xdata.txt",sep=",",header=TRUE)
 
+# Creates plot4.png graphic device and plots the data.
+
 png(filename="plot4.png",width=480,height=480,units="px",bg="transparent")
+
 
 par(mfrow=c(2,2))
 

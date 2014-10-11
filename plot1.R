@@ -1,5 +1,5 @@
 
-
+# reads the unzipped data file into R
 data <- read.table("household_power_consumption.txt",sep=";",header=TRUE)
 
 # prints the object size
@@ -18,20 +18,16 @@ datapasted2 <-strptime(datapasted,format="%Y-%m-%d %H:%M:%S")
 
 data$time_type <-datapasted2 
 
-#as.POSIXct(paste(data$Date,data$Time),format="%Y/%m/%d %H:%M:%S")
-# doesnt work directly
-#as.POSIXct(paste(Date_type,Time_type),format="%Y/%m/%d %H:%M:%S")
 
-#timevector <-  data$time_type > as.POSIXlt("2007-02-01")
-
-#timevector2 <- data$time_type < as.POSIXlt("2007-02-01")
 
 # Data interval is two days
 xdata <- subset(data,time_type>as.POSIXlt("2007-02-01") & time_type< as.POSIXlt("2007-02-03") )
+
+# creates the png file and plots the graph
 png(filename="plot1.png",width=480,height=480,units="px",bg="transparent")
 Global_active_power <- as.numeric(as.character(xdata$Global_active_power))
 hist(Global_active_power,col="red",main="Global Active Power", xlab="Global Active Power (kilowatts)")
 dev.off()
 
-
+# saves the subset data frame into the working directory for quicker loading the next time.
 write.table(xdata,file="xdata.txt", sep=",")

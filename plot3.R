@@ -1,4 +1,8 @@
+# Reads the subset data frame created in plot1.R
+
 xdata  <- read.table("xdata.txt",sep=",",header=TRUE)
+
+# Creates and plots the third plot , plot3.png
 
 png(filename="plot3.png",width=480,height=480,units="px",bg="transparent")
 with(xdata,plot(as.POSIXlt(time_type),as.numeric(as.character(xdata$Sub_metering_1)),"l",col="black",ylab="",xlab=""))
